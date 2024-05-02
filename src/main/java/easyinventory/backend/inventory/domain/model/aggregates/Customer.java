@@ -34,5 +34,18 @@ public class Customer {
         this.phone = phone;
     }
 
+    public boolean isValidPhone(Integer phone) {
+        if (phone == null) throw new IllegalArgumentException("Phone is required") ;
+        if (phone.toString().length() != 9) throw new IllegalArgumentException("Phone must have 9 digits");
+        return true;
+    }
+
+    public boolean isValidEmail(String email) {
+        if (email == null) throw new IllegalArgumentException("Email is required") ;
+        if (!email.contains("@")) throw new IllegalArgumentException("Email must contain @");
+        return true;
+    }
+
+
     public Customer() {}
 }
