@@ -1,16 +1,16 @@
 package easyinventory.backend.inventory.domain.model.aggregates;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-class SaleTest {
+import static org.junit.Assert.*;
+
+public class SaleTest {
 
     @Test
-    void testQuantityProductsInSale() {
+    public void testQuantityProductsInSale() {
         Product product1 = new Product( "Laptop", 10, 10, 10, 10, 10, 1L);
         Product product2 = new Product( "Laptop2", 10, 10, 10, 10, 10, 1L);
         Sale sale = new Sale("Leo","10-10-2021",200);

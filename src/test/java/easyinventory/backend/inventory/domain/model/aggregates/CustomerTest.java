@@ -1,20 +1,20 @@
 package easyinventory.backend.inventory.domain.model.aggregates;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class CustomerTest {
+public class CustomerTest {
 
     @Test
-    void testIsValidPhone() {
+    public void testIsValidPhone() {
         Customer customer = new Customer("Juan", "Perez", "27-11-2002","juan@gmail.com",909022321);
         boolean esperado = true;
         assertEquals(customer.isValidPhone(customer.getPhone()), esperado);
     }
 
     @Test
-    void testIsValidEmail() {
+    public void testIsValidEmail() {
         Customer customer = new Customer("Juan", "Perez", "27-11-2002","juan@gmail.com" ,928232121);
         boolean esperado = true;
         assertEquals(customer.isValidEmail(customer.getEmail()), esperado);
