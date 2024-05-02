@@ -27,5 +27,18 @@ public class Provider {
         this.email = email;
     }
 
+    public boolean isValidRuc(Long ruc) {
+        if (ruc == null) throw new IllegalArgumentException("RUC is required") ;
+        if (ruc.toString().length() != 11) throw new IllegalArgumentException("RUC must have 11 digits");
+        return true;
+    }
+
+    public boolean isValidPhone(Integer phone) {
+        if (phone == null) throw new IllegalArgumentException("Phone is required") ;
+        if (phone.toString().length() != 9) throw new IllegalArgumentException("Phone must have 9 digits");
+        return true;
+    }
+
+
     public Provider() {}
 }
